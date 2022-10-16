@@ -257,7 +257,10 @@ body {
     list-style: none;
     display: flex;
     gap: 10px;
-    padding: 0 32px 30px 32px;
+    justify-content: center; 
+    padding-bottom: 30px;
+    /*1. Для .list-social задайте justify-content: center;
+        padding-bottom: 30px; */
 }
 .link-social {
     display: flex;
@@ -287,16 +290,21 @@ body {
     flex-wrap: wrap;
 }
 .link-client {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    /*2. Для .link-client приберіть паддинги,
+        іконку краще позиціонувати флексами */
     width: 170px;
     height: 92px;
     border: 1px solid var(--color-brand-icons);
     border-radius: 4px;
-    padding: 16px 32px;
+    
 }
 .link-client:hover,
  .link-client:focus {
-    border: 1px solid var(--logo-color-blue);
+    border-color: var(--logo-color-blue);
+    /* 3. При .link-client: hover, .link-client:focus краще міняти колір бордеру, а не малювати його наново */
 }
 .logo-client {
     fill: var(--color-brand-icons);
@@ -364,15 +372,21 @@ body {
     display: flex;
 }
 .footer-social {
-    padding: 12px 0 0 70px;
+    margin-left: 70px;
+    margin-top: 12px;
+    /* 4. Для .footer-social приберіть паддинги,
+        задайте лівий марджин (по макету має бути верхній відступ 12px, тому додав верхній margin)*/
 }
 .social-title {
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
-        text-transform: uppercase;
-        color: #ffffff;
-        margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: 700;
+        /* 5. .social-title зробіть р,
+            це не заголовок (в CSS додав font-weight зі значенням 700(по макету))*/
 }
 .footer-social-links {
     display: flex;
