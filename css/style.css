@@ -259,8 +259,6 @@ body {
     gap: 10px;
     justify-content: center; 
     padding-bottom: 30px;
-    /*1. Для .list-social задайте justify-content: center;
-        padding-bottom: 30px; */
 }
 .link-social {
     display: flex;
@@ -293,8 +291,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center; 
-    /*2. Для .link-client приберіть паддинги,
-        іконку краще позиціонувати флексами */
     width: 170px;
     height: 92px;
     border: 1px solid var(--color-brand-icons);
@@ -304,7 +300,6 @@ body {
 .link-client:hover,
  .link-client:focus {
     border-color: var(--logo-color-blue);
-    /* 3. При .link-client: hover, .link-client:focus краще міняти колір бордеру, а не малювати його наново */
 }
 .logo-client {
     fill: var(--color-brand-icons);
@@ -374,8 +369,6 @@ body {
 .footer-social {
     margin-left: 70px;
     margin-top: 12px;
-    /* 4. Для .footer-social приберіть паддинги,
-        задайте лівий марджин (по макету має бути верхній відступ 12px, тому додав верхній margin)*/
 }
 .social-title {
     font-size: 14px;
@@ -385,8 +378,6 @@ body {
     color: #ffffff;
     margin-bottom: 20px;
     font-weight: 700;
-        /* 5. .social-title зробіть р,
-            це не заголовок (в CSS додав font-weight зі значенням 700(по макету))*/
 }
 .footer-social-links {
     display: flex;
@@ -432,10 +423,15 @@ body {
 .portfolio-card {
     background: var(--color-white);
 }
-.portfolio-card:hover,
- .portfolio-card:focus {
+.portfolio-card-link {
+    display: block;
+    text-decoration: none;
+}
+.portfolio-card-link:hover,
+ .portfolio-card-link:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+/* 1. Для посилання додайте клас - https: //i.imgur.com/duouBLm.png, по класу додайте text-decoration: none; display: block; і при ховері на посилання мають з'явитися тіні */
 .portfolio-card img {
     display: block;
 }
@@ -451,6 +447,8 @@ body {
     line-height: 2;
     letter-spacing: 0.06em;
     margin-bottom: 4px;
+    color: var(--brand-color);
+    /* 2. Для .portfolio-card-title задайте колір за макетом */
 }
 .portfolio-card-text {
     font-size: 16px;
