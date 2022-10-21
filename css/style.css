@@ -28,7 +28,8 @@ img {
 body {
     font-family: 'Roboto', sans-serif;
     color: var(--brand-color);
-    font-size: 16px;     
+    font-size: 16px; 
+       
 }
 /* -----------------header------------------- */
 .menu { 
@@ -79,10 +80,23 @@ body {
     letter-spacing: 0.02em; 
     text-decoration: none;
     list-style: none;
-    color: var(--brand-color);   
+    color: var(--brand-color); 
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-actual {
-     color: var(--logo-color-blue);
+     position: relative;
+}
+.nav-actual::after {
+    content: '';
+    position: absolute;
+    bottom: -33px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--logo-color-blue);
 }
 .nav-contacts {   
     font-weight: 500;
@@ -94,14 +108,20 @@ body {
     color: var(--color-contacts-text);
     display: flex;
     align-items: center;
-    gap: 10px;      
+    gap: 10px;   
+    transition-property: color;  
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-contact {
     fill: var(--color-contacts-text);
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-contacts:hover > .icon-contact,
 .nav-contacts:focus > .icon-contact {
-    fill: var(--logo-color-blue)
+    fill: var(--logo-color-blue);   
 }
 .li-contacts:not(:last-child) {
     margin-right: 30px;
@@ -219,16 +239,38 @@ body {
     display: flex;
     gap: 30px;   
 }
+.image {
+    position: relative;
+}
+.subtitle-image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 23.8%;
+    background: rgba(47, 48, 58, 0.8);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.1428;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
 /* ------------section-team---------------- */
 .section-team {
     background: var(--background-original-color);
 }
 .cards-team {
-    list-style: none;
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
     justify-content:center;
+    list-style: none;
 }
 .card {
     background: var(--color-white);
@@ -243,7 +285,7 @@ body {
     letter-spacing: 0.03em;
     color: var(--brand-color);
     margin-bottom: 10px;
-     padding-top: 30px; 
+    padding-top: 30px; 
 }
 .card-text {
     font-size: 16px;
@@ -254,18 +296,23 @@ body {
     margin-bottom: 16px;
 }
 .list-social {
-    list-style: none;
     display: flex;
     gap: 10px;
     justify-content: center; 
     padding-bottom: 30px;
+    list-style: none;
 }
 .link-social {
     display: flex;
-    width: 44px;
-    height: 44px;
     align-items: center;
     justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-social:hover,
 .link-social:focus {
@@ -274,6 +321,9 @@ body {
 }
 .icon-social {
     fill: var(--color-brand-icons);
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-social:hover > .icon-social,
 .link-social:focus > .icon-social {
@@ -281,11 +331,11 @@ body {
 }
 /* -----------------section-clients---------------- */
 .list-clients {
-    list-style: none;
     display: flex;
     gap: 30px;
     justify-content: center;
     flex-wrap: wrap;
+    list-style: none;
 }
 .link-client {
     display: flex;
@@ -295,7 +345,9 @@ body {
     height: 92px;
     border: 1px solid var(--color-brand-icons);
     border-radius: 4px;
-    
+    transition-property: border;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-client:hover,
  .link-client:focus {
@@ -303,6 +355,8 @@ body {
 }
 .logo-client {
     fill: var(--color-brand-icons);
+    transition-property: fill;transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-client:hover > .logo-client,
  .link-client:focus > .logo-client{
@@ -314,22 +368,22 @@ body {
     padding: 60px 0;
 }
 .logo-footer {
+    display: inline-block;
     font-family: 'Raleway';
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
     letter-spacing: 0.03em;
     color: var(--logo-color-blue);
-    text-decoration: none;
-    display: inline-block;
     margin-bottom: 20px;
+    text-decoration: none;
 }
 .logo-footer span {
     color: var(--color-white);
 }
 .footer-list {
-    list-style: none;
     display: inline-block;
+    list-style: none; 
 }
 .footer-list li:not(:last-child) {
     margin-bottom: 9px;
@@ -357,11 +411,11 @@ body {
     color: var(--logo-color-blue);
 }
 .list-buttons {
-    list-style: none;
     display: flex;
     justify-content: center;
     gap: 8px;
     margin-bottom: 50px;
+    list-style: none;
 }
 .page-footer .container {
     display: flex;
@@ -381,8 +435,8 @@ body {
 }
 .footer-social-links {
     display: flex;
-    list-style: none;
     gap: 10px;
+    list-style: none;
 }
 .footer-link-social {
     background: rgba(255, 255, 255, 0.1);
@@ -414,11 +468,11 @@ body {
     color: var(--color-white);
 } 
 .portfolio-cards-list {
-    list-style: none;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;  
+    gap: 30px; 
+    list-style: none; 
 }
 .portfolio-card {
     background: var(--color-white);
@@ -431,7 +485,32 @@ body {
  .portfolio-card-link:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-/* 1. Для посилання додайте клас - https: //i.imgur.com/duouBLm.png, по класу додайте text-decoration: none; display: block; і при ховері на посилання мають з'явитися тіні */
+.cardimage-overlay {
+    position: relative;
+    overflow: hidden;
+}
+.overlay-text {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: translateY(100%);
+    transition-property: transform;
+    transition-duration: 250ms;
+    font-size: 18px;
+    line-height: 1.5555;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    background-color:  rgba(33, 150, 243, 0.9);
+}
+.portfolio-card-link:hover .overlay-text {
+    transform: translateY(0);
+}
 .portfolio-card img {
     display: block;
 }
@@ -448,11 +527,48 @@ body {
     letter-spacing: 0.06em;
     margin-bottom: 4px;
     color: var(--brand-color);
-    /* 2. Для .portfolio-card-title задайте колір за макетом */
+    
 }
 .portfolio-card-text {
     font-size: 16px;
     line-height: 1.9;
     letter-spacing: 0.03em;
     color: var(--color-contacts-text);
+}
+/* ------------modal-------------- */
+.backdrop {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    
+}
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 528px;
+    height: 581px;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    
+    transform: translate(-50%, -50%);
+}
+.modal-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }

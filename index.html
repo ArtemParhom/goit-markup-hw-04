@@ -64,7 +64,9 @@
       <section class="section-title">
         <div class="container">
           <h1 class="title">Ефективні рішення для вашого бізнесу</h1>
-          <button class="button-title" type="button">Замовити послугу</button>
+          <button class="button-title" type="button" data-modal-open>
+            Замовити послугу
+          </button>
         </div>
       </section>
       <section class="section-skills section-pading">
@@ -106,12 +108,15 @@
           <ul class="images-list">
             <li class="image">
               <img src="./images/imgone.jpg" alt="computer" width="370" />
+              <h3 class="subtitle-image">Десктопні додатки</h3>
             </li>
             <li class="image">
               <img src="./images/imgtwo.jpg" alt="smartphone" width="370" />
+              <h3 class="subtitle-image">Мобільні додатки</h3>
             </li>
             <li class="image">
               <img src="./images/imgthree.jpg" alt="tablet" width="370" />
+              <h3 class="subtitle-image">Дизайнерські рішення</h3>
             </li>
           </ul>
         </div>
@@ -414,5 +419,13 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-button" type="button" data-modal-close>
+          <img src="./images/close-black.svg" width="18" height="18" alt="" />
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
