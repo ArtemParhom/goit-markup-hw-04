@@ -87,7 +87,6 @@ body {
 .nav-actual {
      position: relative;
      color: var(--logo-color-blue);
-     /* 1. Посилання поточної сторінки має бути синім (додав color: var(--logo-color-blue) */
 }
 .nav-actual::after {
     content: '';
@@ -219,7 +218,6 @@ body {
     color: var(--color-contacts-text);
     margin: 0;   
 }
-/* ------padding for all sections--------- */
 .section-pading {
     padding: 94px 0;
 }
@@ -318,8 +316,7 @@ body {
 .link-social:hover,
 .link-social:focus {
     background-color: var(--logo-color-blue);
-    /* border-radius: 50%; */
-    /* 3. При .link-social: hover, .link-social:focus можете прибрати бордер радіус (після здачі ДЗ коментарі видалю) */
+
 }
 .icon-social {
     fill: var(--color-brand-icons);
@@ -348,7 +345,6 @@ body {
     border: 1px solid var(--color-brand-icons);
     border-radius: 4px;
     transition-property: border-color;
-    /* 4. Для .link-client потрібно анімувати border-color */
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -401,9 +397,6 @@ body {
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    /* 5. Для посилань всередині footer-list додайте анімацію (додав transition-property: color;
-        transition-duration: 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);) */
 }
 .footer-contacts {
     font-style: normal;
@@ -415,9 +408,6 @@ body {
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    /* 5. Для посилань всередині footer-list додайте анімацію (додав transition-property: color;
-            transition-duration: 250ms;
-            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);) */
 }
 .footer-address:hover, 
 .footer-address:focus,
@@ -436,8 +426,7 @@ body {
     display: flex;
 }
 .footer-social {
-    margin-left: 70px;
-    margin-top: 12px;
+    margin: 12px 12px auto 70px;
 }
 .social-title {
     font-size: 14px;
@@ -477,16 +466,11 @@ body {
     transition-property: background-color, color, box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    /* 7. Для .portfolio-button додайте анімацію (додав   transition-property: background-color, color, box-shadow;
-        transition-duration: 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);) */
 }
  .portfolio-button:hover,
   .portfolio-button:focus { 
     background: var(--logo-color-blue);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-    /* border-radius: 4px; */ 
-    /* 6. При .portfolio-button: hover, .portfolio-button:focus приберіть бордер радіус */
     color: var(--color-white);
 } 
 .portfolio-cards-list {
@@ -505,9 +489,6 @@ body {
     transition-property:box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    /* 8. Для .portfolio-card-link додайте анімацію (додав transition-property: box-shadow;
-        transition-duration: 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);)*/
 }
 .portfolio-card-link:hover,
  .portfolio-card-link:focus {
@@ -531,7 +512,6 @@ body {
     transition-property: transform;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    /* 9. Для .overlay-text відсутня функція анімації */
     font-size: 18px;
     line-height: 1.5555;
     letter-spacing: 0.03em;
@@ -576,9 +556,6 @@ body {
     transition-property: opacity, visibility;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    /* 2. Додайте анімацію для .backdrop ( додав transition-property: opacity;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);) */
 }
 .is-hidden {
     opacity: 0;
@@ -605,4 +582,54 @@ body {
     border-radius: 50%;
     background-color: #ffffff;
     border: 1px solid rgba(0, 0, 0, 0.1);
+}
+/* ----------footer form------- */
+.footer-form {
+    margin-left: auto;
+    margin-top: 12px;
+}
+
+.social-title {
+   display: inline-block;
+}
+
+.subscription-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.subscription-input {
+    width: 358px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: var(--background-footer-color);
+    padding-left: 12px;
+    padding-right: 12px;
+    color: #FFFFFF;
+    margin: 0 12px 12px 0;
+}
+.subscription-input::placeholder {
+    font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 1.25;
+        color: rgba(255, 255, 255, 0.6);
+}
+.button-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button-text {
+    margin-right: 10px;
+}
+.button-footer::after {
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-image: url(../images/icon-for-footer-button.png); 
 }
