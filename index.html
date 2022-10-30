@@ -417,7 +417,12 @@
             </li>
           </ul>
         </div>
-        <form class="footer-form" name="footer-form" autocomplete="on" validate>
+        <form
+          class="footer-form"
+          name="footer-form"
+          autocomplete="on"
+          novalidate
+        >
           <label for="subscription" class="social-title"
             >Підпишіться на розсилку</label
           >
@@ -450,10 +455,9 @@
             <use href="./images/icons.svg#close-button"></use>
           </svg>
         </button>
-        <form class="modal-form" name="modal-form" autocomplete="on" validate>
-          <h4 class="title-modal-form">
-            Залиште свої дані, ми Вам передзвонимо
-          </h4>
+        <form class="modal-form" name="modal-form" autocomplete="on" novalidate>
+          <p class="title-modal-form">Залиште свої дані, ми Вам передзвонимо</p>
+          <!-- 6. .title-modal-form має бути р, а не заголовок -->
           <label for="name-modal" class="label-styles name-modal">Ім'я</label>
           <div class="box-inputs">
             <input type="text" id="name-modal" class="name-person" /><svg
