@@ -432,7 +432,7 @@ body {
     display: flex;
 }
 .footer-social {
-    margin: 12px auto auto 70px;
+    margin: 12px 0 0 70px;
     /* 2. Для .footer-social залиште лише верхній і лівий марджини */
 }
 .social-title {
